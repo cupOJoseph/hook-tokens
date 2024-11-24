@@ -5,14 +5,14 @@ import {Script, console} from "forge-std/Script.sol";
 import {Token} from "../src/Token.sol";
 
 contract CounterScript is Script {
-    Counter public counter;
+    Token public token;
 
     function setUp() public {}
 
     function run() public {
         vm.startBroadcast();
 
-        counter = new Token();
+        token = new Token();
 
         vm.stopBroadcast();
     }
